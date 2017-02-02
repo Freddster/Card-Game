@@ -34,7 +34,7 @@ namespace Card_Game
             Console.WriteLine($"Andersen: {Andersen.GetTotalValue()}");
             Console.WriteLine($"Hansen: {Hansen.GetTotalValue()}");
 
-            game.AnnounceWinner();
+            game.AnnounceWinnerMaxValue();
 
             Console.ReadKey();
         }

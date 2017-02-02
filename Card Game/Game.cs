@@ -26,8 +26,7 @@ namespace Card_Game
             }
         }
 
-
-        public void AnnounceWinner()
+        public void AnnounceWinnerMaxValue()
         {
             List<Player> winners = new List<Player>();
             winners.Add(new Player("N/A"));

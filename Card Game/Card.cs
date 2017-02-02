@@ -11,10 +11,15 @@ namespace Card_Game
         public enum CardSuits
         {
             Red = 1,
-            Blue = 2,
-            Green = 3,
-            Yellow = 4,
-            Gold = 5
+            Blue,
+            Green,
+            Yellow,
+            Gold
+        }
+
+        protected internal int Biggestmultiplier()
+        {
+            return (int)CardSuits.Gold;
         }
 
         public Card(int suit, int number)
@@ -40,6 +45,6 @@ namespace Card_Game
         public int GetValue()
         {
             return _suit * _number;
-        }
+        }    
     }
 }

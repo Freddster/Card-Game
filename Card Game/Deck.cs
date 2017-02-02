@@ -10,8 +10,7 @@ namespace Card_Game
 
         public Deck()
         {
-            var numm = Enum.GetValues(typeof(Card.CardSuits)).Cast<Card.CardSuits>().Max();
-            for (var suitToGive = 1; suitToGive < ; suitToGive++)
+            for (var suitToGive = 1; suitToGive < new Card(0,0).Biggestmultiplier(); suitToGive++)
             {
                 for (var numberToGive = 1; numberToGive< 9; numberToGive++)
                 {
