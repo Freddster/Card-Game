@@ -50,5 +50,30 @@ namespace Card_Game
                 Console.WriteLine($"The winner is {player.Name}");
             }
         }
+
+        public void AnnounceWinnerMinValue()
+        {
+            List<Player> winners = new List<Player>();
+            winners.Add(playerList[0]);
+
+            foreach (var player in playerList)
+            {
+                if (player.GetTotalValue() < winners[0].GetTotalValue())
+                {
+                    winners.Clear();
+                    winners.Add(player);
+                }
+                else if (player.GetTotalValue() == winners[0].GetTotalValue())
+                {
+                    if(winners[0] != playerList[0])
+                        winners.Add(player);
+                }
+            }
+
+            foreach (var player in winners)
+            {
+                Console.WriteLine($"The winner is {player.Name}");
+            }
+        }
     }
 }
